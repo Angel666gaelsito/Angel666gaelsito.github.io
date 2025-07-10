@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-image: url("imagener de los equipos/wallpaperflare.com_wallpaper (14).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto hace que sea estática */
+    background-position: center;
+    color: white;
+  }
+  
+  header {
+    background-color: #1d428a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid #ffc72c;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc72c;
+  }
+  
+  .menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ffc72c;
+  }
+  
+  .intro {
+    padding: 60px 20px 40px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .intro h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #ffc72c;
+  }
+  
+  .info-box {
+    background-color: #1c1c1c5b;
+    padding: 30px;
+    border-left: 6px solid #ffc72c86;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 199, 44, 0.4);
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .info-box p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .video-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .video-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffc72c;
+  }
+  
+  .video-container {
+    max-width: 800px;
+    margin: auto;
+    border: 4px solid #1d428a;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .jugadores-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .jugadores-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffc72c;
+  }
+  
+  .jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: #2b2b2b;
+    border-left: 6px solid #1d428a;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #ffc72c;
+    color: #1d428a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ffe46b;
+    transform: scale(1.05);
+  }
+  
+  .card {
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  height: 350px;
+  transition: transform 0.2s;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #1c44f559, #d9ff0041, #1c44f559);
+  color: #fff;
+  padding: 20px 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-back h3 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 15px;
+}
+
+.card-back ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  width: 40%;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+.gauge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: conic-gradient(#ff0000 0% 0%, #444 0% 100%);
+  margin-bottom: 4px;
+  position: relative;
+  box-shadow: 0 0 3px #41414188;
+}
+
+.gauge::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #444;
+  }

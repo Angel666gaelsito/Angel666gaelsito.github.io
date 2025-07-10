@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia de la NBA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("imagener de los equipos/wallpaperflare.com_wallpaper (1).jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-position: center;
+      color: #fff;
+    }
+
+    .timeline-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      position: relative;
+    }
+
+      h1 {
+  background-color: #1a1a1aad;
+  color: #10a3d4;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00bfff80;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.timeline-container {
+  text-align: center;
+}
+
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #0052af;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .timeline-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: #c00700;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      z-index: 1;
+      animation: pulse 2s infinite;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: #1a1a1ac5;
+      padding: 15px 20px;
+      border-radius: 12px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px #00bfff99;
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      color: #00bfff;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0px #00bfff; }
+      50% { box-shadow: 0 0 10px #00bfff; }
+      100% { box-shadow: 0 0 0px #00bfff; }
+    }
+
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00bfff;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px #00bfffaa;
+      transition: transform 0.2s;
+      z-index: 999;
+    }
+
+    #scrollTopBtn:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 10px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 10px;
+        text-align: left !important;
+        left: 0 !important;
+      }
+
+      .timeline-item::before {
+        left: 0 !important;
+      }
+    }
+    .menu {
+  text-align: right;
+  padding-right: 20px; 
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+
+}
+
+.menu a:hover {
+  color: #167afc;
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="equipos.html">Equipos</a>
+    </nav>
+
+  <div class="timeline-container">
+    <h1>Historia de la NBA</h1>
+    <ul class="timeline">
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>1946 - 1949</h3>
+          <p>Nace la BAA y se fusiona con la NBL para formar la NBA oficialmente.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 50 - 60</h3>
+          <p>Los Celtics de Bill Russell dominan. Mikan y Wilt destacan como leyendas tempranas.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 70</h3>
+          <p>La NBA se expande y se fusiona con la ABA. Dr. J se convierte en ícono del espectáculo.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 80</h3>
+          <p>Rivalidad épica entre Magic y Bird. Celtics y Lakers reviven el deporte a lo grande.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 90</h3>
+          <p>Michael Jordan domina con los Bulls, ganando 6 campeonatos y globalizando la NBA.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 2000</h3>
+          <p>Kobe y Shaq dominan. Spurs construyen una dinastía. Llega LeBron James.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 2010</h3>
+          <p>Warriors revolucionan el básquet con Curry. LeBron, Miami, Bucks y Raptors destacan.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-content">
+          <h3>Años 2020</h3>
+          <p>Lakers, Bucks, Nuggets campeones. Nueva era con Luka, Shai, Tatum y Wemby.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button id="scrollTopBtn" title="Ir arriba">⬆</button>
+
+  <script>
+    
+    const items = document.querySelectorAll('.timeline-item');
+
+    function revealOnScroll() {
+      const triggerBottom = window.innerHeight * 0.9;
+      items.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < triggerBottom) {
+          item.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+ 
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    scrollBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
